@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+p {
+    color: #555;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 115, 232, 0.7); /* Semi-transparent overlay */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+/* Features Section */
+.features .feature-box {
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.features .feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.features .feature-box i {
+    color: #1a73e8;
+    transition: color 0.3s;
+}
+
+.features .feature-box:hover i {
+    color: #4285f4;
+}
+
+/* Screenshots Section */
+.screenshots .screenshot-box {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.screenshots .screenshot-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Testimonials Section */
+.testimonials .carousel-item {
+    padding: 0 20px;
+}
+
+.testimonials p {
+    font-style: italic;
+    color: #777;
+}
+
+.testimonials h5 {
+    margin-top: 15px;
+    color: #1a73e8;
+}
+
+/* Download Section */
+.download {
+    background: linear-gradient(135deg, #1a73e8, #4285f4);
+    color: #fff;
+}
+
+.download h2, .download p {
+    color: #fff;
+}
+
+.download a.btn-primary {
+    background-color: #fff;
+    color: #1a73e8;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download a.btn-primary:hover {
+    background-color: #e0e0e0;
+    color: #1a73e8;
+}
+
+/* Contact Section */
+.contact form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact form .form-label {
+    font-weight: 600;
+}
+
+.contact form button {
+    background-color: #1a73e8;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #4285f4;
+}
+
+/* Footer */
+.footer a {
+    color: #1a73e8;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #4285f4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publisher": "Little, Brown and Company",
+    "year": 1951,
+    "genres":[
+        "Classic",
+        "Fiction",
+        "Young Adult"
+    ],
+    "available": true,
+    "details":{
+        "pages": 256,
+        "language": "English",
+        "ISBN": "978-0-140-12345-6"
+    }
+}
