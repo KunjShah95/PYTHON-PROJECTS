@@ -1,4 +1,0 @@
-http://127.0.0.1:5000/access/facebook.com
-http://127.0.0.1:5000/access/twitter.com
-http://127.0.0.1:5000/access/instagram.com
-http://127.0.0.1:5000/access/linkedin.com

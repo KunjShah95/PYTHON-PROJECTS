@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Code Generator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚡ QR Code Generator</h1>
+      <form method="POST" class="form">
+        <input
+          type="text"
+          name="data"
+          placeholder="Enter text or URL"
+          required
+        />
+
+        <label
+          >Fill Color:
+          <input
+            type="color"
+            name="fill_color"
+            value="{{ fill_color or '#000000' }}"
+          />
+        </label>
+        <label
+          >Background Color:
+          <input
+            type="color"
+            name="back_color"
+            value="{{ back_color or '#ffffff' }}"
+          />
+        </label>
+
+        <button type="submit">Generate QR</button>
+      </form>
+
+      {% if img_data %}
+      <div class="qr-container">
+        <img src="data:image/png;base64,{{ img_data }}" alt="QR Code" />
+        <a
+          href="data:image/png;base64,{{ img_data }}"
+          download="qrcode.png"
+          class="download-btn"
+        >
+          Download QR Code
+        </a>
+      </div>
+      {% endif %}
+
+      <p class="footer">Made with ❤️ using Flask & Python</p>
+    </div>
+  </body>
+</html>
