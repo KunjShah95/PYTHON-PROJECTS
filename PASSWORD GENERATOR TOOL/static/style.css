@@ -1,0 +1,160 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top left, #1a1a2e, #16213e);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+/* Container Card */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 60px rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    animation: popIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+@keyframes popIn {
+    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+}
+
+/* Title */
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 8px #ff6ec7;
+}
+
+/* Form Fields */
+.field {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.field input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #eee;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+.field small {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* Checkbox Group */
+fieldset {
+    border: none;
+    margin-bottom: 1.2rem;
+}
+fieldset legend {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+fieldset label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+fieldset input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 1.1em;
+    height: 1.1em;
+    accent-color: #ff6ec7;
+}
+
+/* Button */
+button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6ec7, #8e44ad);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(142, 68, 173, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(142, 68, 173, 0.8);
+}
+
+/* Result Box */
+.result {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    animation: fadeIn 0.4s ease-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.result h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    color: #ff6ec7;
+}
+.output-group {
+    display: flex;
+    gap: 0.5rem;
+}
+.output-group input {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-family: monospace;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+.output-group #copy-btn {
+    padding: 0 1rem;
+    background: #ff6ec7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255,110,199,0.5);
+    transition: background 0.2s ease;
+}
+.output-group #copy-btn:hover {
+    background: #e055a8;
+}
